@@ -48,13 +48,19 @@ function App() {
     valueChange(value, toggle)
   },[toggle, value])
 
-
   return (
     <>
       <div className='app-container'>
-          <div>{toggle ? rangeValueYearly : rangeValue}</div>
-          <input type="range" step={25} min='0' max='100' onChange={(event)=>setValue(event.target.value)} />
-          <div onClick={()=>setToggle(!toggle)} >click me</div>
+          <div className='header'>
+            <h2>Simple, traffic-based pricing</h2>
+            <p>Sign-up for our 30-day trail. No credit card required.</p>
+          </div>
+          <div className='pricing-container'>
+            <div>{toggle ? rangeValueYearly : rangeValue}</div>
+            <input style={{backgroundSize:`${value}%`}} type="range" step={25} min='0' max='100' onChange={(event)=>setValue(event.target.value)} />
+            <div onClick={()=>setToggle(!toggle)} >click me</div>
+          </div>
+          
       </div>
     </>
   )
