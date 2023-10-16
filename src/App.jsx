@@ -97,11 +97,11 @@ function App() {
               toggle={toggle} 
               setToggle={setToggle}
               />   
-
+              
               <div className='billing year'>
                 Yearly Billing
               </div>
-              <div className='discount'>25% discount</div>
+              <div className='discount'>25% <span className='hiden-discount'>discount</span></div>
             </div>
           <Footer/>
           </div>
